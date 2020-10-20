@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class = "panel-wrapper">
+      <form class = "panel-container">
+        <div class = "panel-header-container"/>
+         <div class = "panel-title"/>Sign Up</div>     
+        </div>
+        <div class = "panel-body-container"/>
+          <div class="flex-blocks">
+            <div class="child1">
+              <div class="input-field-container" id = "first-name">
+                  <input type="input" class="input-edit-field" placeholder="First name" name="first-name" id='first-name' required="" minlength="1" maxlength="40"/>
+                  <label for="first-name" class="input-edit-label">First name</label>
+                  <div class="input-edit-warning"></div>     
+              </div>
+              <div class="input-field-container" id = "last-name">
+                  <input type="input" class="input-edit-field" placeholder="Last name" name="last-name" id='last-name' required="" minlength="1" maxlength="40"/>
+                  <label for="last-name" class="input-edit-label">Last name</label>
+                  <div class="input-edit-warning"></div>     
+              </div>              
+            </div>
+            <div class="child2">
+              <div class = "gender-container">
+                <div class = "gender-title"/>Gender</div>     
+                <div class = "radio-container">
+                  <input type="radio" id="radio-1" name="gender" value = "Male" checked="checked" />
+                  <label for="radio-1"><span></span>Male</label>
+                </div>
+                <div class = "radio-container">
+                  <input type="radio" id="radio-2" name="gender" value = "Female" />
+                  <label for="radio-2"><span></span>Female</label>
+                </div>
+              </div>  
+              <div class = "age-container">
+                <div class = "age-title"/>Age</div>  
+                <div class="input-number-container">
+                    <input name = "age" class = "input-number" type="number" step = "1" value="10" min="10" max="100"></input>
+                    
+                    <div class="input-number-arrows-container"> 
+                        <button type = "button" class = "arrow-top" name="input-number-plus" >
+                        </button>
+                        <button type = "button" class = "arrow-bottom" name="input-number-minus" >
+                        </button>           
+                    </div>         
+                </div>
+              </div>                          
+            </div>         
+            <div class="child3">
+              <div class="input-field-container">
+                  <input type="email" class="input-edit-field" placeholder="Email" name="email" id='email' required="" pattern="^\S+@\S+$" minlength="3" maxlength="40"/>
+                  <label for="email" class="input-edit-label">Email</label>
+                  <div class="input-edit-warning"></div>     
+              </div>                       
+            </div>
+            <div class="child4">
+              <div class="input-field-container">
+                  <input type="password" class="input-edit-field" placeholder="Password" name="password" id='password' required="" minlength="8" maxlength="40"/>
+                  <label for="password" class="input-edit-label">Password</label>
+                  <div class="input-edit-warning"></div>     
+              </div>
+              <div class="input-field-container">
+                  <input type="password" class="input-edit-field" placeholder="Confirm password" name="confirm-password" id='confirm-password' required="" minlength="8" maxlength="40"/>
+                  <label for="confirm-password" class="input-edit-label">Confirm password</label>
+                  <div class="input-edit-warning"></div>     
+              </div>              
+            </div>                 
+          </div>
+        </div>
+        <div class = "panel-footer-container"/>
+          <button type = "button" class = "accept-button" name="Sign Up"/>Sign Up</button> 
+        </div>
+      </form>
+    </div>    
+  </body>
+
+  <script src="js/account.js"></script>
+  <script src="js/inputNumberControlls.js"></script>
+  <script src="js/warnings.js"></script>
+  <script src="js/form.js"></script>
+
+
+
+
+</html>

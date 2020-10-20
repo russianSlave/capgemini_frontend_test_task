@@ -1,0 +1,100 @@
+.input-field-container {
+	position: relative;
+	width: 226px;
+	height: 32px;
+
+	display: flex;
+	flex-direction: column;
+	/*flex-wrap: wrap;*/
+	flex-wrap: nowrap;
+}
+
+.input-edit-warning{
+	width: 100%;
+	height: 8px;
+	font-family: var(--main-font-family);
+	font-weight: 200;
+	font-size: 5pt;
+	color: var(--red);
+
+	opacity: 0;
+	transition: 1s;
+}
+
+.input-edit-container{
+	width: 100%;
+	height: 24px;
+}
+
+.input-edit-field {
+	padding: 0;
+	margin: 0;
+	border: 0;
+
+	font-family: var(--main-font-family);
+	font-size: 8pt;
+
+	width: 100%;
+	height: 15px;
+	margin-top: 8px;
+
+	border-bottom: 1px solid rgb(220,220,220);
+
+	outline: 0;
+	color: var(--black);
+
+	background: transparent;
+	transition: border-color 0.2s;
+
+}
+
+.input-edit-field:visited {
+	background-color: transparent;	
+}
+
+
+
+.input-edit-label {
+	position: absolute;
+	font-family: var(--main-font-family);
+
+	top: 0;
+	display: block;
+	transition: 1s;
+	font-size: font-size: 8pt;
+	/*color: rgb(129,129,129);*/
+	color:var(--gray-placeholder);
+	user-select: none;
+}
+
+
+.input-edit-field::placeholder {
+	color: transparent;
+}
+
+.input-edit-field:placeholder-shown ~ .input-edit-label {
+	font-size: 8pt;
+	cursor: text;
+	top: 8px;
+}
+
+.input-edit-field:not(placeholder-shown):not(focus) ~ .input-edit-label, .input-edit-field:focus ~ .input-edit-label {
+	position: absolute;
+	top: 0;
+	display: block;
+	transition: 0.2s;
+	font-size: 5.5pt;
+}
+
+
+.input-edit-field[show-warning="true"]:required:invalid ~ .input-edit-warning{
+	opacity:1;
+}
+
+.input-edit-field[show-warning="true"]:invalid:required ~ .input-edit-warning{
+	content: "*The field required";
+}
+
+.input-edit-field[show-warning="true"]:required:invalid {
+	border-bottom: 1px solid rgb(255,64,129);
+}

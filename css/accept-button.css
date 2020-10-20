@@ -1,0 +1,24 @@
+.accept-button:hover:focus:not(disabled) {
+	background: linear-gradient(45deg, rgb(86,98,156), rgb(63,81,181));
+	box-shadow: 50px rgb(86,96,156);
+
+} 
+
+.accept-button:disabled {
+	background: var(--disabled-button-color);
+} 
+
+.accept-button {
+	background-color: var(--blue);
+	border: none;
+	border-radius: 0.5vh;
+
+	width: var(--panel-footer-button-wigth);
+	height: var(--panel-footer-button-height);
+
+	font-family: var(--main-font-family);
+	font-size: var(--panel-footer-button-font-size);
+	color: white;
+
+	outline: 0;
+} 

@@ -1,0 +1,73 @@
+.gender-title, .age-title {
+  font-family: var(--main-font-family);
+  color: var(--gray-semi);
+    font-size: 8pt;
+}
+
+.gender-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 226px;
+  height: 21px;
+} 
+
+.radio-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+input[type="radio"] {
+  display: none;
+}   
+  
+input[type="radio"] + label span {
+    display:inline-block;
+
+    width:21px;
+    height:21px;
+
+    margin-right: 6px;
+
+    vertical-align:middle;
+
+    background-image: url(/img/dot.svg);
+    cursor:pointer; 
+
+    transition: background-image 3s ease-in-out;
+    transition: opacity 0.15s ease-in-out;   
+ 
+}   
+
+input[type="radio"]:checked + label span {
+    background-image: url(/img/dot_active.svg);
+} 
+
+input[type="radio"]:disabled + label span {
+    background-image: url(/img/dot.svg);
+    opacity: 0.65;
+} 
+
+input[type="radio"]:hover:enabled:not(checked) + label span {
+  background-image: url(/img/dot_active.svg);
+    filter: grayscale(100%);
+} 
+
+input[type="radio"]:hover:enabled:checked + label span {
+    filter: brightness(120%);
+} 
+
+
+input[type="radio"] + label {
+   font-family: var(--main-font-family);
+   font-size: 8pt;
+   color: var(--black);
+
+
+   user-select: none;
+}
+
